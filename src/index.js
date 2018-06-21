@@ -24,6 +24,7 @@ class App extends Component {
         this.videoSearch('Korea');
     }
 
+    // Search Videos from Youtube
     videoSearch(term) {
         YTSearch({key: API_KEY, term: term}, (videos) => {
             this.setState({ 
@@ -34,6 +35,7 @@ class App extends Component {
         });
     }
 
+    // Render
     render() {
         const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
         return (

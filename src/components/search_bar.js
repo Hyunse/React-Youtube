@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 // const Component = React.Component; // Syntactic sugar
 
+/**
+ * Search Bar Component
+ * @class
+ */
 class SearchBar extends Component {
+    
+    // Constructor
     constructor(props) {
         super(props);
 
@@ -18,6 +24,7 @@ class SearchBar extends Component {
         );
     }
 
+    // Change Input
     onInputChange(term) {
         this.setState({ term });
         this.props.onSearchTerm(term);

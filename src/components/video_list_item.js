@@ -1,12 +1,19 @@
 import React from 'react';
 
+/**
+ * Video List Item
+ * 
+ * @param {Object} video
+ * @param {Function} onVideoSelect 
+ */
 const VideoListItem = ({ video, onVideoSelect }) => {
-    console.log(video);
+    
+    // Val
     const
         imageUrl = video.snippet.thumbnails.default.url,
         imageTitle = video.snippet.title;
 
-
+    // Return
     return (
         <li className="list-group-item" onClick={() => onVideoSelect(video)} >
             <div className="video-list media">
